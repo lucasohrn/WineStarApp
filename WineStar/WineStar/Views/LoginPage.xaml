@@ -8,7 +8,13 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <Label Text="Username"/>
+            <Entry Placeholder="Username"/>
+            <Label Text="Password"/>
+            <Entry Placeholder="Password"/>
+            <Button VerticalOptions="Center" Text="Login" BackgroundColor="#B5838D" Command="{Binding LoginCommand}"/>
+            <Button VerticalOptions="Center" Text="Register New User" BackgroundColor="#B5838D" Command="{Binding LoginCommand}"/>
+            <Label Text="Register" Padding="160,30,50,100" FontSize="Body"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
