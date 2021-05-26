@@ -19,5 +19,13 @@ namespace WineStar.Models
             this.UserName = UserName;
             this.Password = Password;
         }
+
+        public bool CheckInformation()
+        {
+            if (!this.UserName.Equals("") || !this.Password.Equals(""))
+                return true;
+            else
+                return false;
+        }
     }
 }
