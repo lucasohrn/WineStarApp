@@ -6,14 +6,24 @@
              mc:Ignorable="d"
              x:Class="WineStar.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+
+    
+
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Label x:Name="lbl_Username" Text="Username" VerticalOptions="Center"/>
-            <Entry x:Name="Entry_Username" Placeholder="Username" VerticalOptions="Center"/>
-            <Label x:Name="lbl_Password" Text="Password" VerticalOptions="Center"/>
-            <Entry x:Name="Entry_Password" Placeholder="Password" VerticalOptions="Center"/>
-            <Button x:Name="Btn_LogIn" VerticalOptions="Center" Text="Login" BackgroundColor="#B5838D" Clicked="SignInProcedure"/>
-            <Button VerticalOptions="Center" Text="Register New User" BackgroundColor="#B5838D" /> <!--Command="{Binding LoginCommand}"-->
+        <StackLayout x:Name="LogoStack" VerticalOptions="Start">
+            <Image x:Name="LogoIcon" Source="images.png" Margin="0,80,0,0"/>
+            <StackLayout x:Name="LoginEntriesStack" Padding="40,0,40,0" VerticalOptions="StartAndExpand">
+
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+
+                <Label x:Name="lbl_Username" Text="Username" VerticalOptions="Center"/>
+                <Entry x:Name="Entry_Username" Placeholder="Username" VerticalOptions="Center"/>
+                <Label x:Name="lbl_Password" Text="Password" VerticalOptions="Center"/>
+                <Entry x:Name="Entry_Password" Placeholder="Password" VerticalOptions="Center"/>
+                <Button x:Name="Btn_LogIn" VerticalOptions="Center" Text="Login" BackgroundColor="#B5838D" Clicked="SignInProcedure"/>
+                <Button VerticalOptions="Center" Text="Register New User" BackgroundColor="#B5838D" Command="{Binding LoginCommand}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>

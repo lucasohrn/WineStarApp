@@ -22,7 +22,7 @@ namespace WineStar.Models
 
         public bool CheckInformation()
         {
-            if (!this.UserName.Equals("") || !this.Password.Equals(""))
+            if (!this.UserName.Equals("") || !this.Password.Equals("") || !this.UserName.Equals(null) || !this.Password.Equals(null))
                 return true;
             else
                 return false;
